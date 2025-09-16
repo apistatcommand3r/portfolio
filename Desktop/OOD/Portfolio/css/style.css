@@ -9,12 +9,40 @@ body{
   color: #1D2739;
 }
 #header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px 5%;
 }
 .about-me {
   padding: 10px 5%;
+  margin-top: 2%;
 }
+.about-me p{
+  font-size: 20px;
+}
+.about-me h2{
+  font-size: 30px;
+}
+
 nav a{
   color: #496591;
   font-size: 18px;
+  margin-left: 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+nav a::after{
+  content:'';
+  width: 0;
+  height: 3px;
+  background: #1D2739;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+nav a:hover::after{
+  width: 100%;
 }
